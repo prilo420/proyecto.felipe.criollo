@@ -77,5 +77,17 @@ Descargamos Apache2
 ```
 sudo apt install apache2
 ```
-
-
+Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio
+```
+sudo nano /etc/apache2/sites-available/jitsifelipe.duckdns.org
+```
+Agregamos el repositorio de jitsi meet
+```
+wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
+sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
+sudo apt update
+```
+Instalamos jitsi
+```
+sudo apt install jitsi-meet
+```
