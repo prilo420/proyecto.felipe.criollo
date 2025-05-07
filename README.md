@@ -3,9 +3,9 @@ documentación
 DOCUMENTACIÓN JITSI MEET
 
 # Creamos las máquinas virtuales que nos indica la práctica en Hyper-V. 
-Ubuntu sever 
-Ubuntu Desktop
-Windows 10 o Windows 11
+* Ubuntu sever 
+* Ubuntu Desktop
+* Windows 10 o Windows 11
  
 
 Configuración de SHH
