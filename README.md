@@ -1,8 +1,8 @@
-# proyecto.felipe.criollo
+# proyecto.jitsi-meet.felipe.criollo
 documentación
 DOCUMENTACIÓN JITSI MEET
 
-Creamos las máquinas virtuales que nos indica la práctica en Hyper-V. 
+# Creamos las máquinas virtuales que nos indica la práctica en Hyper-V. 
 Ubuntu sever 
 Ubuntu Desktop
 Windows 10 o Windows 11
