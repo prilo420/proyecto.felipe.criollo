@@ -1,4 +1,4 @@
-# proyecto.jitsi-meet.felipe.criollo
+## proyecto.jitsi-meet.felipe.criollo
 documentación
 DOCUMENTACIÓN JITSI MEET
 
@@ -8,7 +8,8 @@ DOCUMENTACIÓN JITSI MEET
 * Windows 10 o Windows 11
  
 
-Configuración de SHH
+## Configuración de SHH
 Dentro de la máquina de ubuntu server, introduciremos el siguiente comando para instalar las SSH en la misma.
+sudo apt install shh
  
 
