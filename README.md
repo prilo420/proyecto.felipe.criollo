@@ -35,3 +35,24 @@ Guardamos:
 ```
 sudo netplan apply
 ```
+### Ubuntu Desktop
+Ejecutamos el comando y modificamos el archivo
+```
+sudo nano /etc/netplan/01-network-manager-all.yaml
+```
+Escribimos esto
+```
+network:
+  version: 2
+  ethernets:
+       eth0:
+           dhcp4: no
+           addresses: [192.168.1.150/24]
+           nameservers:
+             addresses: [8.8.8.8, 8.8.4.4]
+       eth1:
+           dhcp4: yes
+```
+
+
+
