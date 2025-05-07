@@ -53,6 +53,29 @@ network:
        eth1:
            dhcp4: yes
 ```
+### Windows 10
 
+
+### Servidor Jitsi Meet
+opcional actualizar el sistema
+```
+sudo apt update
+```
+Descargamos el paquete HTTPS
+```
+sudo apt install apt-transport-https
+```
+Descargar el repositorio universe para las dependecias de  Jitsi
+```
+sudo apt-add-repository universe
+```
+Actualizamos
+```
+sudo apt update
+```
+Descargamos Apache2
+```
+sudo apt install apache2
+```
 
 
