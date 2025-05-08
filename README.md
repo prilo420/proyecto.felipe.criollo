@@ -1,5 +1,5 @@
 ## proyecto.jitsi-meet.felipe.criollo
-documentación
+
 DOCUMENTACIÓN JITSI MEET
 
 # Creamos las máquinas virtuales que nos indica la práctica en Hyper-V. 
@@ -56,7 +56,7 @@ network:
 ### Windows 10
 
 
-### Servidor Jitsi Meet
+### Apache
 opcional actualizar el sistema
 ```
 sudo apt update
@@ -65,7 +65,7 @@ Descargamos el paquete HTTPS
 ```
 sudo apt install apt-transport-https
 ```
-Descargar el repositorio universe para las dependecias de  Jitsi
+Descargar el repositorio universe para las dependecias 
 ```
 sudo apt-add-repository universe
 ```
@@ -115,13 +115,36 @@ sudo systemctl reload apache2
 
 ```
 ![resultado](cap1.png)
-Agregamos el repositorio de jitsi meet
+---
+### Jitsi meet
+1. Ejecutamos
+```
+sudo apt update && sudo apt upgrade -y
+sudo apt install wget curl gnupg2 apt-transport-https -y
+```
+2. Configuramos el firewall
+```
+sudo ufw allow 80/tcp    
+sudo ufw allow 443/tcp    
+sudo ufw allow 10000/udp  
+sudo ufw status
+``` 
+3. Agregar el repositorio oficial Jitsi meet
+```
+echo 'deb https://download.jitsi.org stable/' | sudo tee /etc/apt/sources.list.d/jitsi-stable.list
+
+```
+4. Importamos la clave GPG de jitsi meet
 ```
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
 sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
 sudo apt update
 ```
-Instalamos jitsi
+5. Actulizamos
+```
+sudo apt Update
+```
+6. Instalamos jitsi
 ```
 sudo apt install jitsi-meet
 ```
