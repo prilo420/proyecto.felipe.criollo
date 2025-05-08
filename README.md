@@ -77,6 +77,12 @@ Descargamos Apache2
 ```
 sudo apt install apache2
 ```
+Vamos habilitar el modulo SSl para Apache y luego reiniciar el servicio
+```
+sudo a2enmod ssl
+sudo systemctl restart apache2
+```
+
 Vamos a genera el certificado autofirmado
 ```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -84,7 +90,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/ssl/certs/jitsifelipe.duckdns.org.crt
 
 ```
-Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio
+Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio en esta ruta (etc/apache2/sites-available/).
 ```
 sudo nano /etc/apache2/sites-available/jitsifelipe.duckdns.org
 ```
@@ -97,11 +103,18 @@ sudo nano /etc/apache2/sites-available/jitsifelipe.duckdns.org
     SSLCertificateFile /etc/ssl/certs/jitsifelipe.duckdns.org.crt
     SSLCertificateKeyFile /etc/ssl/private/jitsifelipe.duckdns.org.key
     
-    ErrorLog ${APACHE_LOG_DIR}/jitsifelipe-ssl-error.log
-    CustomLog ${APACHE_LOG_DIR}/jitsifelipe-ssl-access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
 ```
+Vamos habilitar el sitio y recargar la configuarción
+```
+sudo a2ensite jitsifelipe.duckdns.org.conf
+sudo systemctl reload apache2
+
+```
+![resultado](cap1.png)
 Agregamos el repositorio de jitsi meet
 ```
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
