@@ -57,22 +57,22 @@ network:
 Vamos configurar la ip
 
 1.Abrimos el panel de control, ejecutamos Windows +R y escribimos 'Control' 
-![image]()
+![image](cap5.png)
 
 2.Buscamos 'Redes e Internet' y entramos
-![image](https://github.com/user-attachments/assets/6da46e23-e8a1-4fa2-81e6-eba7c7483a61)
+![image](cap6.png)
 
 3.Buscamos 'Centros de redes y recursos compartidos' y entramos
-![image](https://github.com/user-attachments/assets/f6817853-e988-496c-944b-13a71766c4d2)
+![image](cap7.png)
 
 4.Buscamos y seleccionamos 'Cambiar configuración del adaptador'
-![image](https://github.com/user-attachments/assets/9ad8fb00-ffab-4193-a6d8-68deb31af766)
+![image](cap8.png)
 
 5.entramos en las propiedades de nuestro adaptador de red y entramos en el Protocolo de versión de internet
-![image](https://github.com/user-attachments/assets/871b37c1-63e2-4b7a-877d-74b80fa96b9d)
+![image](cap9.png)
 
 6. configuaramos la IP
-![image](https://github.com/user-attachments/assets/84c4a32d-b504-43cb-95a8-c4e9cb84e327)
+![image](cap10.png)
 
 ### nginx
 opcional actualizar el sistema
