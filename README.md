@@ -56,7 +56,7 @@ network:
 ### Windows 10
 
 
-### Apache
+### nginx
 opcional actualizar el sistema
 ```
 sudo apt update
@@ -73,14 +73,14 @@ Actualizamos
 ```
 sudo apt update
 ```
-Descargamos Apache2
+Descargamos nginx
 ```
-sudo apt install apache2
+sudo apt install nginx
 ```
 Vamos habilitar el modulo SSl para Apache y luego reiniciar el servicio
 ```
 sudo a2enmod ssl
-sudo systemctl restart apache2
+sudo systemctl restart nginx
 ```
 
 Vamos a genera el certificado autofirmado
@@ -90,9 +90,9 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/ssl/certs/jitsifelipe.duckdns.org.crt
 
 ```
-Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio en esta ruta (etc/apache2/sites-available/).
+Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio en esta ruta (etc/nginx/sites-available/).
 ```
-sudo nano /etc/apache2/sites-available/jitsifelipe.duckdns.org
+sudo nano /etc/nginx/sites-available/jitsifelipe.duckdns.org
 ```
 ```
 <VirtualHost *:443>
@@ -111,10 +111,10 @@ sudo nano /etc/apache2/sites-available/jitsifelipe.duckdns.org
 Vamos habilitar el sitio y recargar la configuarción
 ```
 sudo a2ensite jitsifelipe.duckdns.org.conf
-sudo systemctl reload apache2
+sudo systemctl reload nginx
 
 ```
-![resultado](cap1.png)
+
 ---
 ### Jitsi meet
 1. Ejecutamos
@@ -148,3 +148,5 @@ sudo apt Update
 ```
 sudo apt install jitsi-meet
 ```
+![debemos poner nuestros dominio](cap2.png)
+
