@@ -77,7 +77,7 @@ Descargamos nginx
 ```
 sudo apt install nginx
 ```
-Vamos habilitar el modulo SSl para Apache y luego reiniciar el servicio
+Vamos habilitar el modulo SSl para nginx y luego reiniciar el servicio
 ```
 sudo a2enmod ssl
 sudo systemctl restart nginx
@@ -90,6 +90,8 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/ssl/certs/jitsifelipe.duckdns.org.crt
 
 ```
+![ssl](cap4.png)
+
 Vamos a configurar mi dominio, nesecitamos crear un archivo con el nombre de mi domio en esta ruta (etc/nginx/sites-available/).
 ```
 sudo nano /etc/nginx/sites-available/jitsifelipe.duckdns.org
