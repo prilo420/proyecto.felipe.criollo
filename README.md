@@ -56,24 +56,26 @@ network:
 ### Windows 10
 Vamos configurar la ip
 
-1.Abrimos el panel de control, ejecutamos Windows +R y escribimos 'Control' 
+1.Abrimos el panel de control, ejecutamos Windows +R y escribimos "Control" 
 ![image](cap5.png)
-
-2.Buscamos 'Redes e Internet' y entramos
+---
+2.Buscamos "Redes e Internet" y entramos
 ![image](cap6.png)
-
-3.Buscamos 'Centros de redes y recursos compartidos' y entramos
+---
+3.Buscamos "Centros de redes y recursos compartidos" y entramos
 ![image](cap7.png)
-
-4.Buscamos y seleccionamos 'Cambiar configuración del adaptador'
+---
+4.Buscamos y seleccionamos "Cambiar configuración del adaptador"
 ![image](cap8.png)
-
+---
 5.entramos en las propiedades de nuestro adaptador de red y entramos en el Protocolo de versión de internet
 ![image](cap9.png)
-
+---
 6. configuaramos la IP
+   
 ![image](cap10.png)
-
+---
+---
 ### nginx
 opcional actualizar el sistema
 ```
@@ -170,3 +172,4 @@ sudo apt install jitsi-meet
 ```
 ![debemos poner nuestros dominio](cap2.png)
 
+Al intentar conectarme al sevidor no me de deja el fariwall
