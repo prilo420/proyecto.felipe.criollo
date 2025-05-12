@@ -11,7 +11,7 @@ DOCUMENTACIÓN JITSI MEET
 ## Configuración de SHH
 Dentro de la máquina de ubuntu server, introduciremos el siguiente comando para instalar las SSH en la misma.
 ```
-sudo apt install shh*
+sudo apt install shh
 ```
 ## configuración de Ip estática
 ### Ubuntu Server
